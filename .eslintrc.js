@@ -1,5 +1,6 @@
 module.exports = {
-  rules: {
-    "@typescript-eslint/no-explicit-any": "off"
-  }
+    extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+    rules: {
+        "@typescript-eslint/no-explicit-any": "off"
+    }
 };
