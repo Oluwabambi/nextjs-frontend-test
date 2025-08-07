@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Go54 UI Clone (Next.js + Tailwind CSS)
 
-## Getting Started
+This project is a **front-end UI** built with **Next.js** and **Tailwind CSS**, replicating the design of two Go54 pages:
+- [Homepage](https://go54.com/)
+- [Google Workspace Service Page](https://go54.com/google-workspace-service)
 
-First, run the development server:
+The application uses a **dummy API / mocked JSON data** to populate the **five tabs** on the homepage (`Domain`, `Hosting`, `Email`, `Marketing`, `More`).
 
-```bash
+---
+
+## Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Oluwabambi/nextjs-frontend-test.git
+   cd nextjs-frontend-test
+
+2. **Install dependencies**
+    ```bash
+    npm install
+    # or
+    yarn install
+
+3. **Run the development server**
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will be available at http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Build for production (optional)r**
+npm run build
+npm start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Approach**
+- Tech Stack:
+    - Next.js for server-side rendering and page routing
+    - Tailwind CSS for utility-first styling
+    - TypeScript for type safety
+    - Mock API using local JSON data and a free dummy API from mockapi.io
 
-## Learn More
+**Design Implementation:**
+- Followed the exact layout and styles of Go54’s homepage and Google Workspace service page
+- Ensured responsiveness for desktop and mobile
+- Tabs on the homepage dynamically render content from mocked API data
 
-To learn more about Next.js, take a look at the following resources:
+**Code Structure:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+src/app/ – Next.js App Router components (index.tsx, google-workspace-service.tsx)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+components/ – Reusable UI components (Header, Footer, Tabs, etc.)
 
-## Deploy on Vercel
+data/ – Mock JSON files for API simulation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+styles/ – Tailwind global styles and configuration with custom CSS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Version Control & Deployment:**
+
+Used Git for version control with clear commit messages
+
+Deployed to Netlify for hosting. The two pages hosted on Netlify can be found here:
+[Home Page](https://nextjs-assessment.netlify.app/)
+[Google Workspace Service Page](https://nextjs-assessment.netlify.app/google-workspace-service)
+
+**Known Limitations**
+- The project uses mocked API data, so no real backend integration is present
+- Pages are limited to the two specified designs — other Go54 pages are not included
+- Certain animations or effects from the original site may be simplified
+- SEO optimizations are minimal (can be improved if needed)
