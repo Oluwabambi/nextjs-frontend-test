@@ -83,7 +83,7 @@ export const CancelIcon = () => {
 
 export const CaretDownIcon = ({ d }: { d: string}) => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-[20px] h-[20px]"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-[20px] h-[20px]"><path stroke-linecap="round" stroke-linejoin="round" d={d}></path></svg>
     )
 }
 
@@ -129,7 +129,7 @@ export const InfoIcon = () => {
     )
 }
 
-export const PlusIcon = ({ d }: any) => {
+export const PlusIcon = ({ d }: { d: string }) => {
     return (
         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d={d} stroke="#F99C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
     )

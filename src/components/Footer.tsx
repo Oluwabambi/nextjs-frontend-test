@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { FacebookIcon, FooterLogo, InstagramIcon, LinkedinIcon, TwitterIcon, WebIcon, WorkspaceIcon, YoutubeIcon } from './Icons';
-import Select, { components } from 'react-select';
+import Select, { components, ControlProps } from 'react-select';
 import { Country, ICountry } from 'country-state-city';
 import { languageOptions } from '@/utils/constants';
 
@@ -21,7 +21,7 @@ const Footer = () => {
     </div>
   );
 
-  const Control = ({ children, ...props }: any) => (
+  const Control = <Option, IsMulti extends boolean>({ children, ...props }: ControlProps<Option, IsMulti>) => (
     <components.Control {...props}>
       <WebIcon /> {children}
     </components.Control>

@@ -39,7 +39,7 @@ const Carousel = () => {
                     </SwiperSlide>
                 )) }
                 <div className="flex gap-3 items-center justify-center my-5">
-                    { reviews?.map((_: any, index: any) => (
+                    { reviews?.map((_: {comment: string; name: string; id: string}, index: number) => (
                         <div
                             key={index} 
                             onClick={() => swiperRef.current?.slideTo(index)}

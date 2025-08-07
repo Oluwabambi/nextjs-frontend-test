@@ -22,7 +22,7 @@ const Header = () => {
       id="header-nav"
     >
         <div>
-            <div className="max-w-[1640px] mx-auto lg:px-[4.8rem] relative z-[20] flex justify-between gap-5 items-center py-4 lg:px-[77px] px-[24px] text-[#191919]">
+            <div className="max-w-[1640px] mx-auto lg:px-[4.8rem] relative z-[20] flex justify-between gap-5 items-center py-4 px-[24px] text-[#191919]">
                 <div className="flex gap-5 items-center justify-center text-greyLight font-bold">
                   <div className='cursor-pointer mr-2'>
                     <LogoIcon />
@@ -43,7 +43,7 @@ const Header = () => {
                       options={currecyOptions}
                       defaultValue={currecyOptions[0]}
                       styles={{
-                        control: (baseStyles: any) => ({
+                        control: (baseStyles) => ({
                           ...baseStyles,
                           height: '44px',
                           borderColor: '#F99C1C',
@@ -93,7 +93,7 @@ const Header = () => {
                       className='w-[20px] h-[20px] cursor-pointer'
                       onClick={() => setShowMenuItems((prev) => prev.map(item => ({ ...item, active: item.id === id ? !item.active : item.active })))}
                     >
-                      <CaretDownIcon d={showMenuItems[index].active ? "m19.5 8.25-7.5 7.5-7.5-7.5" : "m19.5 8.25-7.5 7.5-7.5-7.5"} />
+                      <CaretDownIcon d={showMenuItems[index].active ? "m4.5 15.75 7.5-7.5 7.5 7.5" : "m19.5 8.25-7.5 7.5-7.5-7.5"} />
                     </div>
                   </div>
                   { showMenuItems[index].active && (
