@@ -22,15 +22,17 @@ The application uses a **dummy API / mocked JSON data** to populate the **five t
     yarn install
 
 3. **Run the development server**
-npm run dev
-# or
-yarn dev
+    ```bash
+    npm run dev
+    # or
+    yarn dev
 
 The app will be available at http://localhost:3000
 
 3. **Build for production (optional)r**
-npm run build
-npm start
+    ```bash
+    npm run build
+    npm start
 
 **Approach**
 - Tech Stack:
@@ -59,8 +61,8 @@ styles/ – Tailwind global styles and configuration with custom CSS
 Used Git for version control with clear commit messages
 
 Deployed to Netlify for hosting. The two pages hosted on Netlify can be found here:
-[Home Page](https://nextjs-assessment.netlify.app/)
-[Google Workspace Service Page](https://nextjs-assessment.netlify.app/google-workspace-service)
+- [Home Page](https://nextjs-assessment.netlify.app/)
+- [Google Workspace Service Page](https://nextjs-assessment.netlify.app/google-workspace-service)
 
 **Known Limitations**
 - The project uses mocked API data, so no real backend integration is present
