@@ -3,11 +3,11 @@
 import React from 'react'
 import { FacebookIcon, FooterLogo, InstagramIcon, LinkedinIcon, TwitterIcon, WebIcon, WorkspaceIcon, YoutubeIcon } from './Icons';
 import Select, { components } from 'react-select';
-import { Country } from 'country-state-city';
+import { Country, ICountry } from 'country-state-city';
 import { languageOptions } from '@/utils/constants';
 
 const Footer = () => {
-  const getCountries = Country.getAllCountries().map((item: any) => ({
+  const getCountries = Country.getAllCountries().map((item: ICountry) => ({
     label: item.name,
     value: item.name,
     flag: item.flag

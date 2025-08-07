@@ -8,7 +8,7 @@ import classNames from 'classnames'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import FAQs from './FAQs';
-import AOS from 'aos';
+import AOS, { AosOptions } from 'aos';
 import 'aos/dist/aos.css'; 
 
 const GoogleWorkspaceService = () => {
@@ -18,7 +18,7 @@ const GoogleWorkspaceService = () => {
       AOS.init({
         duration: 700,
         delay: 300
-      } as any);
+      } as AosOptions);
     }, []);
 
   return (
@@ -53,7 +53,7 @@ const GoogleWorkspaceService = () => {
       </div>
       <div className='bg-linear-[215deg,#EDEDED_10.87%,#FFF7E900_62.07%,#FFF] md:px-[112px] px-[32px] md:py-[84px] py-[96px]'>
         <h2 className='text-greyLight2 md:text-[30px] text-[20px] font-lato-bold mb-[9px] text-center'>Product Features</h2>
-        <p className='lg:w-[946px] w-full md:text-lg text-[15px] font-medium mb-[79px] mx-auto text-center'>Discover the amazing features of Hostafrica Nigeria Limited's Google Workspace</p>
+        <p className='lg:w-[946px] w-full md:text-lg text-[15px] font-medium mb-[79px] mx-auto text-center'>Discover the amazing features of Hostafrica Nigeria Limited&apos;s Google Workspace</p>
         <div className="flex gap-x-2 gap-y-20 flex-wrap items-center justify-center w-full">
           { productFeaturesItems.map(({ id, name, text, icon: Icon }) => (
             <div key={id} className='bg-darkBlue2 sm:min-w-[392px] max-w-[392px] min-w-full pt-[80px] pb-10 px-10 w-[inherit] text-center relative min-h-[340px]'>

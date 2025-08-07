@@ -93,7 +93,7 @@ const Header = () => {
                       className='w-[20px] h-[20px] cursor-pointer'
                       onClick={() => setShowMenuItems((prev) => prev.map(item => ({ ...item, active: item.id === id ? !item.active : item.active })))}
                     >
-                      <CaretDownIcon d={true ? "m19.5 8.25-7.5 7.5-7.5-7.5" : "m19.5 8.25-7.5 7.5-7.5-7.5"} />
+                      <CaretDownIcon d={showMenuItems[index].active ? "m19.5 8.25-7.5 7.5-7.5-7.5" : "m19.5 8.25-7.5 7.5-7.5-7.5"} />
                     </div>
                   </div>
                   { showMenuItems[index].active && (

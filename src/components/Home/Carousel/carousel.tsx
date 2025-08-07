@@ -40,7 +40,8 @@ const Carousel = () => {
                 )) }
                 <div className="flex gap-3 items-center justify-center my-5">
                     { reviews?.map((_: any, index: any) => (
-                        <div 
+                        <div
+                            key={index} 
                             onClick={() => swiperRef.current?.slideTo(index)}
                             className={classNames('cursor-pointer h-[5.5px] w-[22px] transition-colors duration-300', activeIndex === index ? 'bg-primary' : 'bg-greyLight8')}
                         />

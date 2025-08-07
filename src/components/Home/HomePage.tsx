@@ -6,7 +6,7 @@ import Tabs from "@/components/Home/Tabs";
 import { LogoImg1, LogoImg2, LogoImg3, LogoImg4, LogoImg5, LogoImg6 } from "@/assets";
 import { whySectionData } from "@/utils/mock-data";
 import Carousel from "@/components/Home/Carousel/carousel";
-import AOS from 'aos';
+import AOS, { AosOptions } from 'aos';
 import 'aos/dist/aos.css'; 
 import { useEffect } from "react";
 
@@ -15,7 +15,7 @@ const HomePage = () => {
       AOS.init({
         duration: 700,
         delay: 300
-      } as any);
+      } as AosOptions);
     }, []);
 
   return (
@@ -79,11 +79,11 @@ const HomePage = () => {
       <div className="bg-linear-to-r from-primary-100 to-white">
         <div className="pb-20 pt-24 md:px-0 px-6" data-aos="fade-up">
           <div className="max-w-[1440px] mx-auto flex flex-col justify-center items-center">
-            <h1 className="text-center mb-4 font-lato-extrabold md:text-[45px] sm:text-[40px] text-2xl">You've got mail.</h1>
+            <h1 className="text-center mb-4 font-lato-extrabold md:text-[45px] sm:text-[40px] text-2xl">You&apos;ve got mail.</h1>
             <p className="text-center mb-10 md:text-base text-lg">Get industry tips and tricks and juicy offers straight to your mailbox.</p>
             <div className="flex md:flex-row flex-col gap-3 md:items-center max-w-[790px] w-full">
               <input className="bg-white h-[44px] rounded-[6px] px-4 text-secondary border border-primary w-full min-w-0" placeholder="Enter email address" type="text" />
-              <button className="bg-primary h-[44px] min-w-8 flex justify-center items-center px-8 md:max-w-[270px] max-w-full w-full font-lato-bold hover:opacity-[0.7] transition-opacity duration-500" type="button">I'm interested. Sign me up</button>
+              <button className="bg-primary h-[44px] min-w-8 flex justify-center items-center px-8 md:max-w-[270px] max-w-full w-full font-lato-bold hover:opacity-[0.7] transition-opacity duration-500" type="button">I&apos;m interested. Sign me up</button>
             </div>
           </div>
 

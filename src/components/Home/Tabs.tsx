@@ -22,7 +22,7 @@ const Tabs = () => {
         <>
             <div className='md:hidden flex px-[32px] my-[20px]'>
                 {homeTabs.map((tab, index) => (
-                    <>
+                    <div key={index}>
                         <div
                             key={index}
                             className={classNames('w-1/5 px-[12px] py-[5px] cursor-pointer bg-white items-center justify-center flex', activeTab === tab && '!bg-primary')}
@@ -30,14 +30,13 @@ const Tabs = () => {
                         >
                             <span className='text-greyLight2 text-sm font-lato-bold'>{tab}</span>
                         </div>
-                    </>
+                    </div>
                 ))}
             </div>
             <div className={classNames('md:mx-10 md:p-0 py-[50px] px-[32px]', styles.tabs__container)}>
                     <div className={'md:flex hidden'}>
                         <div className='w-1/6 p-6 bg-white'>&nbsp;</div>
                         {homeTabs.map((tab, index) => (
-                            <>
                                 <div 
                                     key={index}
                                     className={classNames('grow-1 p-4 cursor-pointer bg-white items-center justify-center flex', activeTab === tab && '!bg-transparent')}
@@ -45,7 +44,6 @@ const Tabs = () => {
                                 >
                                     <span className='text-greyLight2 md:text-lg font-lato-bold font-bold'>{tab}</span>
                                 </div>
-                            </>
                         ))}
                         <div className='w-1/6 p-4 bg-white'>&nbsp;</div>
                     </div>
@@ -64,8 +62,8 @@ const Tabs = () => {
                                 <h2 className='text-[25px] sm:text-[35px] md:text-[48px] text-darkBlue font-lato-bold leading-[1.2]'>{currentTab.title}</h2>
                                 <p className='text-secondary text-lg'>{currentTab.description}</p>
                                 <div className="flex gap-3 items-center">
-                                    { currentTab.buttons.map(btn => (
-                                        <button type='button' className={classNames('text-darkBlue px-5 py-2 flex items-center justify-center h-[48px] md:min-w-[40px] min-w-[42px] whitespace-nowrap', btn.type === 'primary' ? 'bg-primary' : 'bg-white border border-primary' )}>{btn.text}</button>
+                                    { currentTab.buttons.map((btn, index) => (
+                                        <button key={index} type='button' className={classNames('text-darkBlue px-5 py-2 flex items-center justify-center h-[48px] md:min-w-[40px] min-w-[42px] whitespace-nowrap', btn.type === 'primary' ? 'bg-primary' : 'bg-white border border-primary' )}>{btn.text}</button>
                                     )) }
                                 </div>
                             </div>

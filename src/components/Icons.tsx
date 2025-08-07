@@ -131,7 +131,7 @@ export const InfoIcon = () => {
 
 export const PlusIcon = ({ d }: any) => {
     return (
-        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8.47754V16.4775M8 12.4775H16M22 12.4775C22 18.0004 17.5228 22.4775 12 22.4775C6.47715 22.4775 2 18.0004 2 12.4775C2 6.95469 6.47715 2.47754 12 2.47754C17.5228 2.47754 22 6.95469 22 12.4775Z" stroke="#F99C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d={d} stroke="#F99C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
     )
     {/* <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 12.4775H16M22 12.4775C22 18.0004 17.5228 22.4775 12 22.4775C6.47715 22.4775 2 18.0004 2 12.4775C2 6.95469 6.47715 2.47754 12 2.47754C17.5228 2.47754 22 6.95469 22 12.4775Z" stroke="#F99C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg> */}
 }
