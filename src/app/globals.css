@@ -1,4 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/Lato-Regular.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Lato Bold";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/Lato-Bold.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Lato Black";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/Lato-Black.ttf') format("truetype");
+}
 
 :root {
   --background: #ffffff;
@@ -10,17 +35,103 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
 }
 
-@media (prefers-color-scheme: dark) {
+@theme {
+  --color-primary: #F99C1C;
+  --color-darkBlue: #0A0D1A;
+  --font-lato: "Lato", sans-serif;
+  --font-lato-bold: "Lato Bold";
+  --font-lato-extrabold: "Lato Black";
+  --color-primary-300: #FEE6BC;
+  --color-greyLight: #667085;
+  --color-greyLight2: #101828;
+  --color-greyLight3: #718096;
+  --color-greyLight4: #A8A2A2;
+  --color-greyLight5: #C0B7B7;
+  --color-greyLight6: #E4E7EC;
+  --color-greyLight7: #475467;
+  --color-greyLight8: #D9D9D9;
+  --color-greyLight9: #344054;
+  --color-greyLight10: #EEEEEE;
+  --color-greyLight11: #E2E8F0;
+  --color-greyLight12: #505050;
+  --color-greyLight13: #828080;
+  --color-greyLight14: #98A2B3;
+  --color-secondary: #1A202C;
+  --color-darkBlue2: #131735;
+  --color-darkBlue3: #0E273D;
+  --color-primary-100: #FBAD1EA1;
+  --color-primary-200: #FDD68F;
+  --color-brownLight: #FAF6F6;
+  --color-brownLight2: #F99C1C0F;
+  --color-brownLight3: #FBAD1E21;
+  --color-dark: #2C2C2C;
+  --color-dark2: #111;
+}
+
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
+}
+
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #FFF;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+.nav-btns, .nav-items {
+  display: none;
+}
+.nav-btns {
+  gap: 8px;
+}
+.nav-items {
+  gap: 22px;
+}
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 48px;
+}
+.sm-menu {
+  display: block;
+}
+
+@media (min-width: 1280px) {
+  .nav-btns, .nav-items {
+    display: flex;
+    
+  }
+  .menu-toggle, .sm-menu {
+    display: none;
+  }
 }

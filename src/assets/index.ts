@@ -1,0 +1,14 @@
+export { default as DomainImg } from './images/domain.png';
+export { default as HostingImg } from './images/hosting.png';
+export { default as MarketingImg } from './images/marketing.png';
+export { default as PerformanceImg } from './images/performance.png';
+export { default as YouthImg } from './images/youth.png';
+export { default as LogoImg1 } from './images/logo1.png';
+export { default as LogoImg2 } from './images/logo2.png';
+export { default as LogoImg3 } from './images/logo3.png';
+export { default as LogoImg4 } from './images/logo4.png';
+export { default as LogoImg5 } from './images/logo5.png';
+export { default as LogoImg6 } from './images/logo6.png';
+export { default as WorkspaceImg } from './images/workspace.png';
+export { default as CloudImg } from './images/cloud.png';
+export { default as Workspace2Img } from './images/workspace_2.png';
